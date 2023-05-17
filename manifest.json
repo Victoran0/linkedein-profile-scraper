@@ -1,0 +1,20 @@
+{
+    "name": "linkedIn scraper",
+    "manifest_version": 3,
+    "version": "1.0",
+    "description": "Scraping linkedin user information",
+    "permissions": ["tabs"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.linkedin.com/*"],
+            "js": ["Script.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "LinkedIn Scraper"
+    }
+}
