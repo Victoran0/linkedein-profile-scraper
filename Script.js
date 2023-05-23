@@ -73,6 +73,12 @@ const postToSheets = () => {
     .then(() => alert('successfully sent contact data to google sheets'))
 }
 
+const clickConnectionProfiles = () => {
+    const profilesLink = document.querySelectorAll('.ember-view.mn-connection-card__link')
+    for(let i = 0; i<profilesLink.length; i++){
+        console.log(profilesLink[i].href)
+    } 
+}
 
 chrome.runtime.onMessage.addListener((obj, sender, response) => {
     if (obj.message === 'profile page') {
@@ -85,5 +91,8 @@ chrome.runtime.onMessage.addListener((obj, sender, response) => {
         getContactInfo()
         postToSheets()
     }
-})
 
+    if (obj.message === 'click all profiles') {
+        clickConnectionProfiles()
+    }
+})

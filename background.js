@@ -12,6 +12,13 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                 message: 'scrape data'
             })
         }
+
+        if (tab.url && tab.url.includes('mynetwork/invite-connect/connections')) {
+            chrome.tabs.sendMessage(tabId, {
+                message: 'click all profiles'
+            })
+            console.log('message sent')
+        }
     }
 })
 
