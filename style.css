@@ -1,10 +1,29 @@
 body {
     min-width: 500px;
-    min-height: 500px;
+    min-height: 200px;
 }
 
 button {
+    margin-top: 10px;
     cursor: pointer;
+    padding: 5px 15px;
+    border: 3px solid greenyellow;
+    border-radius: 20px;
+}
+
+.btn-container {
+    margin-left: 29px;
+}
+
+#btn {
+    font-size: 15.7px;
+}
+
+#start {
+    border: 3px solid red;
+    margin-bottom: 10px;
+    color: red;
+    font-weight: bold;
 }
 
 .red {

@@ -1,5 +1,18 @@
 const btn = document.getElementById('btn')
 const pageType = document.getElementById('pageType')
+const btnContainer = document.getElementsByClassName('btn-container')[0];
+
+// ADDING THE BUTTON THAT GOES STRAIGHT TO THE USERS CONNECTIONS LIST
+const startBtn = document.createElement('button');
+startBtn.id = 'start'
+startBtn.textContent = 'SCRAPE CONTACT DETAILS OF YOUR linkedin CONNECTIONS'
+btnContainer.prepend(startBtn)
+
+startBtn.addEventListener('click', () => {
+    chrome.tabs.create({
+        url: 'https://www.linkedin.com/mynetwork/invite-connect/connections/'
+    })
+})
 
 btn.addEventListener('click', () => {
     chrome.tabs.create({

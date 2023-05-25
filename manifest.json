@@ -2,8 +2,8 @@
     "name": "linkedIn scraper",
     "manifest_version": 3,
     "version": "1.0",
-    "description": "Scraping linkedin user information",
-    "permissions": ["tabs"],
+    "description": "Scraping linkedin profile information",
+    "permissions": ["tabs", "storage"],
     "background": {
         "service_worker": "background.js"
     },
